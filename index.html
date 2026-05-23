@@ -3,9 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project EigenFace</title>
+
+    <title>Project EigenFace SVD</title>
 
     <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
         body{
             background: #111;
@@ -17,26 +24,43 @@
         h1{
             text-align: center;
             color: cyan;
+            margin-bottom: 15px;
+            font-size: 40px;
+        }
+
+        .subtitle{
+            text-align: center;
             margin-bottom: 40px;
+            color: #ccc;
         }
 
         .container{
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 25px;
         }
 
         .card{
             background: #222;
-            padding: 20px;
-            border-radius: 12px;
+            padding: 25px;
+            border-radius: 15px;
             border-left: 5px solid cyan;
             transition: 0.3s;
         }
 
         .card:hover{
-            transform: scale(1.02);
-            box-shadow: 0 0 15px cyan;
+            transform: translateY(-5px);
+            box-shadow: 0 0 20px cyan;
+        }
+
+        .card h2{
+            margin-bottom: 10px;
+            color: cyan;
+        }
+
+        .card p{
+            margin-bottom: 15px;
+            color: #ddd;
         }
 
         a{
@@ -49,40 +73,103 @@
             color: white;
         }
 
+        .gallery-title{
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            color: cyan;
+        }
+
+        .gallery{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .gallery img{
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 15px;
+            border: 3px solid cyan;
+            transition: 0.3s;
+        }
+
+        .gallery img:hover{
+            transform: scale(1.05);
+            box-shadow: 0 0 20px cyan;
+        }
+
+        footer{
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            color: #aaa;
+            border-top: 2px solid cyan;
+        }
+
     </style>
 
 </head>
+
 <body>
 
     <h1>PROJECT EIGENFACE SVD</h1>
 
+    <p class="subtitle">
+        Website statis project pengenalan wajah menggunakan metode EigenFace dan SVD
+    </p>
+
     <div class="container">
 
         <div class="card">
-            <h2>README</h2>
-            <p>Dokumentasi project EigenFace.</p>
+
+            <h2>README Project</h2>
+
+            <p>
+                Dokumentasi lengkap mengenai project EigenFace SVD.
+            </p>
+
             <a href="README.md" target="_blank">
                 Buka README
             </a>
+
         </div>
 
         <div class="card">
+
             <h2>Program Python</h2>
-            <p>File utama program Python.</p>
+
+            <p>
+                File utama program Python untuk proses EigenFace.
+            </p>
+
             <a href="main.py" target="_blank">
                 Buka main.py
             </a>
-        </div>
 
-        <div class="card">
-            <h2>Kumpulan Data</h2>
-            <p>Folder dataset gambar EigenFace.</p>
-            <a href="kumpulan data/" target="_blank">
-                Buka Folder Data
-            </a>
         </div>
 
     </div>
+
+    <h2 class="gallery-title">
+        Gallery Dataset Wajah
+    </h2>
+
+    <div class="gallery">
+
+        <img src="dataset/images2.png" alt="Dataset 1">
+
+        <img src="dataset/images3.png" alt="Dataset 2">
+
+        <img src="dataset/images5.png" alt="Dataset 3">
+
+    </div>
+
+    <footer>
+        © 2026 Project EigenFace SVD | Dibuat oleh Yogi Dwi Ramadani
+    </footer>
 
 </body>
 </html>
