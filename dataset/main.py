@@ -18,7 +18,7 @@ for file in os.listdir(dataset_path):
 
     img = cv2.imread(img_path, cv2.IMREAD_GRAYSCALE)
 
-    # ❗ skip kalau gambar tidak terbaca
+    # skip kalau gambar tidak terbaca
     if img is None:
         print("Skip file (tidak terbaca):", file)
         continue
